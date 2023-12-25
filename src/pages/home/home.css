@@ -1,0 +1,105 @@
+
+.home{
+ grid-template-columns: 4.32fr 7.68fr;
+ align-items: center;
+ background-color:var(--body-color);
+ padding: 40px;
+ height: 100vh;
+}
+.home__img{
+height: 95%;
+object-fit: cover;
+border-radius: 30px;
+box-shadow: 0 0 8px hsla(0, 0%,0%,0.3);
+z-index: 1;
+}
+.home__data{
+    max-width: 600px;
+    margin-inline: auto;
+    padding-top: 20px;
+}
+.home__title{
+    position: relative;
+    font-size: var(--h1-font-size);
+    line-height: 1.24;
+    padding-left: 70px;
+    color: var(--text-white);
+}
+.home__title span{
+    color: var(--first-color);
+}
+
+.home__title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 40px;
+    top: 22%;
+    height: 5px;
+    border-radius: 10px;
+    background-color: var(--first-color);
+    
+}
+.textanimate {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 0.7px var(--first-color);
+    background-image: linear-gradient(var(--text-white), var(--text-white));
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -33rem 0;
+    animation: homeBgText 6s linear infinite;
+    animation-delay: 1s;
+    position: relative;
+}
+
+@keyframes homeBgText {
+    to {
+        background-position: 33rem 0; /* Changed the background-position to create a smooth animation */
+    }
+}
+
+ .textanimate::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-right: 2px solid var(--text-white);
+    z-index: -1;
+    animation: homeCurText 6s linear infinite; /* Changed the animation name here */
+    animation-delay: 1s;
+}
+@keyframes homeCurText {
+    to {
+        width: 100%; /* Animate the width to create the typing cursor effect */
+    }
+}
+
+ .home__title .textanimate::before{
+    animation: homeCurText 6s linear infinite;
+    animation-delay: 1s;
+} 
+@keyframes homeCurText {
+    to {
+        width: 100%; /* Animate the width to create the typing cursor effect */
+    }
+}
+
+.home__description{
+    line-height: 2.125;
+    margin-block: 16px 32px;
+    color: var(--text-color);
+}
+.color__block{
+    position: fixed;
+    height: 200%;
+    width: 100%;
+    background-color: var(--first-color);
+    top: -50%;
+    left: -83%;
+    transform: rotate(-15deg);
+}
+
