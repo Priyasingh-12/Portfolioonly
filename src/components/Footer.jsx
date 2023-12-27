@@ -9,11 +9,28 @@ import { IoMdMail } from "react-icons/io";
 import './footer.css';
 
 const Footer = () => {
+
+  const socialLinks = [
+    { icon: <FaGithub />, url: 'https://github.com/Priyasingh-12' },
+    { icon: <FaTwitter />, url: 'http://twitter.com' },
+    { icon: <FaLinkedin />, url: 'https://www.linkedin.com/in/priya-singh-236a09249/' },
+    { icon: <IoMdMail />, url: 'mailto:piyasngh12@gmail.com' },
+    { icon: <FaInstagram />, url: 'https://instagram.com' },
+  ];
+  
     return ( 
         <footer id="footer">
 
         <div className="footer-top">
         <div className="footers container grid">
+
+        <div className='contact__socials'>
+        {socialLinks.map((link, index) => (
+          <a key={index} href={link.url} className='contact__social-link'>
+            {link.icon}
+          </a>
+        ))}
+      </div>
 
         <div className="row">
         <h2>Priya Singh</h2><br/>

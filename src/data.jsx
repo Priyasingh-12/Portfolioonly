@@ -149,8 +149,16 @@ export const resume = [
     category: 'education',
     icon: <FaGraduationCap />,
     year: '2022',
-    title: 'Engineering Degree <span> j spider </span>',
+    title: 'Training Center <span> j spider </span>',
     desc: 'I have done 6 month training for Mern stack and i did so many projects over there.Our goal is to make test management much faster and smoother.',
+  },
+  {
+    id: 4,
+    category: 'education',
+    icon: <FaGraduationCap />,
+    year: '2013-2017',
+    title: 'Engineering Degree <span> VITS </span>',
+    desc: 'I have done my Bachelor of degree in  (ECE) branch',
   }
 ];
 
