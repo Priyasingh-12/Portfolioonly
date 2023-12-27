@@ -24,14 +24,6 @@ const Footer = () => {
         <div className="footer-top">
         <div className="footers container grid">
 
-        <div className='contact__socials'>
-        {socialLinks.map((link, index) => (
-          <a key={index} href={link.url} className='contact__social-link'>
-            {link.icon}
-          </a>
-        ))}
-      </div>
-
         <div className="row">
         <h2>Priya Singh</h2><br/>
         <p>Bandhav garh colony <br/> satna(M.P)-485001 India</p> 
@@ -46,22 +38,12 @@ const Footer = () => {
        <br/><br/>
        
        <div className='contact__socials' > 
-       <a href='https://github.com/Priyasingh-12' className='contact__social-link'>
-       < FaGithub />
-       </a>
-       <a href='http://twitter.com' className='contact__social-link'>
-       <FaTwitter/>
-       </a>
-       <a href='https://www.linkedin.com/in/priya-singh-236a09249/' className='contact__social-link'>
-       < FaLinkedin/>
-       </a>
-       <a href='https://mail.google.com/piyasngh12@gmail.com' className='contact__social-link'>
-       <  IoMdMail />
-       </a>
-       <a href='https://instagram.com' className='contact__social-link'>
-       <  FaInstagram  />
-       </a>
 
+     {socialLinks.map((link, index) => (
+       <a href={link.url} key={index} className='contact__social-link'>
+       {link.icon}
+       </a>
+       ))}
      </div>
 
         </div>
